@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT1</title>
+</head>
+<body>
+<script>
+    let birthday = new Date(1993,11,16);
+    let today = new Date();
+    let year = today.getFullYear() - birthday.getFullYear();
+    let offset = today.getTime() - birthday.getTime();
+    let month = Math.round(offset/1000/30/24/60/60);
+    let days = Math.round(offset/1000/60/60/24);
+    let hours = Math.round(offset/1000/60/60);
+    let minutes = Math.round(offset/1000/60);
+    let seconds = Math.round(offset/1000);
+    
+    console.log(year);
+    console.log(month);
+    console.log(days);
+    console.log(hours);
+    console.log(minutes);
+    console.log(seconds);
+    console.log(offset);
+</script>
+</body>
+</html>

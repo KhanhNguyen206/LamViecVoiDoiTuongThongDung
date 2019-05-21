@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT3</title>
+</head>
+<body>
+<script>
+    let str= "Tôi yêu ngôn ngữ lập trình Javascript";
+
+    //Đếm số kí tự "a" trong một chuỗi;
+    let arr=str.split("");
+    console.log(arr);
+    function countA(str){
+        let regexp=/[a]/;
+        let count=0;
+        for(i=0; i<arr.length; i++){
+            if(regexp.test(arr[i])){
+                count+=1;
+            }
+        }
+        return count;
+    }
+    console.log(countA(str));
+
+    //Đếm số từ trong 1 chuỗi
+
+    function countWord(str){
+        let arr1=str.split(" ");
+        console.log(arr1);
+        let regexp=/[a-zA-Z]/;
+        let count=0;
+        for(i=0; i<arr1.length; i++){
+            if (regexp.test(arr1[i])){
+                count+=1;
+            }
+        }
+        return count;
+    }
+
+    console.log(countWord(str));
+
+    //Thay thế một chuỗi bằng một chuỗi khác
+    let str1=str.replace(/Javascript/i, "Typescript");
+    console.log(str1);
+
+
+</script>
+</body>
+</html>
